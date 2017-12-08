@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Social Responsability Portal</title>
+
+  <!-- Vue JS -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- Boostrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <!-- Boostrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <!-- Login Page CSS -->
+
+  <link href="  http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="AppPage.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700,900" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="LoginPage.html">LoginPage <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="RecoveryPage.html">RecoveryPage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="RegisterPage.html">RegisterPage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AppPage.html">AppPage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h2 class="title">Social Responsability Portal</h2>
+    <p class="description">There used to be a time when you were able to spot infrastructural issues only when you bumped into them or by word-of-mouth communication with friends.</p>
+    <div class="issue_box">
+      <div class="issue">
+        <h5 class="issue_title">Problem 1</h5>
+        <p class="issue_text">Morbi et nisi porta, commodo odio ac, volutpat quam. Sed in urna sit amet neque tristique porttitor consequat at turpis. Proin eu lobortis tellus, ut porta tellus. Vestibulum imperdiet viverra tortor. Sed eu magna ut tellus dictum ornare ac at
+          libero. Curabitur consequat ac lorem eu interdum. Phasellus non tincidunt urna. Cras ac mollis lacus, sed tincidunt nibh. Pellentesque placerat nulla urna, ut tincidunt nisl pulvinar a.</p>
+        <p class="issue_author">By: Iliescu
+          <span class="vote_issue ion-arrow-up-c">
+            10
+          </span>
+          <span class="vote_issue ion-arrow-down-c">
+            5
+          </span>
+          <span class="vote_issue ">
+            Votes:
+          </span></p>
+      </div>
+      <div class="comments">
+        <p class="comment_text"><span class="comment_autor">Mos craciun:
+        </span>Morbi et nisi porta, commodo odio ac, volutpat quam. Sed in urna sit amet neque tristique porttitor consequat at turpis. Proin eu lobortis tellus, ut porta tellus. Vestibulum imperdiet viverra tortor.
+          Sed eu magna ut tellus dictum ornare ac at libero. Curabitur consequat ac lorem eu interdum. Phasellus non tincidunt urna. Cras ac mollis lacus, sed tincidunt nibh. Pellentesque placerat nulla urna, ut tincidunt nisl pulvinar a.
+          <span class="vote_issue ion-arrow-up-c">
+            10
+          </span>
+          <span class="vote_issue ion-arrow-down-c">
+            5
+          </span>
+          <span class="vote_issue ">
+            Votes:
+          </span></p>
+        </p>
+      </div>
+      <div class="comments">
+        <p class="comment_text"><span class="comment_autor">Rudolf:
+        </span>Morbi et nisi porta, commodo odio ac, volutpat quam. Sed in urna sit amet neque tristique porttitor consequat at turpis. Proin eu lobortis tellus, ut porta tellus. Vestibulum imperdiet viverra tortor.
+          Sed eu magna ut tellus dictum ornare ac at libero. Curabitur consequat ac lorem eu interdum. Phasellus non tincidunt urna. Cras ac mollis lacus, sed tincidunt nibh. Pellentesque placerat nulla urna, ut tincidunt nisl pulvinar a.
+          <span class="vote_issue ion-arrow-up-c">
+            20
+          </span>
+          <span class="vote_issue ion-arrow-down-c">
+            10
+          </span>
+          <span class="vote_issue ">
+            Votes:
+          </span></p>
+        </p>
+      </div>
+      <div class="add_comment">
+        <input type="text" placeholder="Write your opinion about this.." v-model="comment" required/>
+        <button v-on:click.prevent="post_comment" class="btn btn-success">Post comment</button>
+      </div>
+    </div>
+    <div class="issue_box">
+      <div class="issue">
+        <h5 class="issue_title">Problem 2</h5>
+        <p class="issue_text">Morbi et nisi porta, commodo odio ac, volutpat quam. Sed in urna sit amet neque tristique porttitor consequat at turpis. Proin eu lobortis tellus, ut porta tellus. Vestibulum imperdiet viverra tortor. Sed eu magna ut tellus dictum ornare ac at
+          libero. Curabitur consequat ac lorem eu interdum. Phasellus non tincidunt urna. Cras ac mollis lacus, sed tincidunt nibh. Pellentesque placerat nulla urna, ut tincidunt nisl pulvinar a.</p>
+        <p class="issue_author">By: Fratele lui
+          <span class="vote_issue ion-arrow-up-c">
+            10
+          </span>
+          <span class="vote_issue ion-arrow-down-c">
+            5
+          </span>
+          <span class="vote_issue ">
+            Votes:
+          </span></p>
+      </div>
+      <div class="comments">
+        <p class="comment_text"><span class="comment_autor">Rudolf:
+        </span>Morbi et nisi porta, commodo odio ac, volutpat quam. Sed in urna sit amet neque tristique porttitor consequat at turpis. Proin eu lobortis tellus, ut porta tellus. Vestibulum imperdiet viverra tortor.
+          Sed eu magna ut tellus dictum ornare ac at libero. Curabitur consequat ac lorem eu interdum. Phasellus non tincidunt urna. Cras ac mollis lacus, sed tincidunt nibh. Pellentesque placerat nulla urna, ut tincidunt nisl pulvinar a.
+          <span class="vote_issue ion-arrow-up-c">
+            20
+          </span>
+          <span class="vote_issue ion-arrow-down-c">
+            10
+          </span>
+          <span class="vote_issue ">
+            Votes:
+          </span></p>
+        </p>
+      </div>
+      <div class="comments">
+        <p class="comment_text"><span class="comment_autor">Mos craciun:
+        </span>Morbi et nisi porta, commodo odio ac, volutpat quam. Sed in urna sit amet neque tristique porttitor consequat at turpis. Proin eu lobortis tellus, ut porta tellus. Vestibulum imperdiet viverra tortor.
+          Sed eu magna ut tellus dictum ornare ac at libero. Curabitur consequat ac lorem eu interdum. Phasellus non tincidunt urna. Cras ac mollis lacus, sed tincidunt nibh. Pellentesque placerat nulla urna, ut tincidunt nisl pulvinar a.
+          <span class="vote_issue ion-arrow-up-c">
+            10
+          </span>
+          <span class="vote_issue ion-arrow-down-c">
+            5
+          </span>
+          <span class="vote_issue ">
+            Votes:
+          </span></p>
+        </p>
+      </div>
+      <div class="add_comment">
+        <input type="text" placeholder="Write your opinion about this.." v-model="comment" required/>
+        <button v-on:click.prevent="post_comment" class="btn btn-success">Post comment</button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+</body>
+
+</html>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      comment: ''
+    },
+    methods: {
+      post_comment() {
+        alert('comment');
+      }
+    }
+  })
+</script>

@@ -1,0 +1,87 @@
+body {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.title {
+  margin: auto;
+  margin-top: 5%;
+}
+
+.description {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+.issue {
+  text-align: left;
+  width: 35%;
+  margin: auto;
+  background: #FEF3E2;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+
+}
+
+.issue_title {
+  background-color: #ffffff80;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.issue_text {
+  font-size: 11px;
+  padding: 0px 20px 0px 20px;
+
+}
+.issue_author {
+  font-size: 15px;
+  padding: 0px 20px 0px 20px;
+
+}
+
+.vote_issue{
+  float: right;
+  margin-left: 20px;
+}
+
+.ion-arrow-up-c{
+  color:green;
+}
+.ion-arrow-down-c{
+  color:red;
+}
+
+
+.comments {
+  font-size: 10px;
+  width: 30%;
+  margin: auto;
+  text-align: left;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.comment_autor {
+  font-size: 13px;
+  color:green;
+}
+
+input {
+  width: 20%;
+  border-style: none;
+  font-size: 10px;
+  padding: 5px;
+}
+.btn{
+  font-size: 10px;
+}
+.issue_box{
+  margin-bottom: 50px;
+}
